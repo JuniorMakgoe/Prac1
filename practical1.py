@@ -1,5 +1,4 @@
-#
-!/usr/bin/python3
+#!/usr/bin/python3
 """
 Python Practical Template
 Keegan Crankshaw
@@ -17,16 +16,15 @@ GPIO.setup(11, GPIO.OUT)
 
 # Logic that you write
 def main():
-	counter=5
-	while (counter):
-	GPIO.output(13,1)
-	time.sleep(1)
-	GPIO.output(13,0)
-	time.sleep(1)
-	counter=counter-1
-	print("write your logic here")
-
-# Only run the functions if 
+	counter=5			#creates a counter variable
+	while (counter):		#loops 5 times
+		GPIO.output(13,1)		#sets pin 13 to a logic high
+		time.sleep(1)			#introduces a delay
+		GPIO.output(13,0)
+		time.sleep(1)
+		counter=counter-1		#decrements the counter variable
+		print(counter)
+# Only run the functions if
 if __name__ == "__main__":
     # Make sure the GPIO is stopped correctly
     try:
