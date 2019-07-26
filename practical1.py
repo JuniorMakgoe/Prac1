@@ -11,19 +11,16 @@ Date: <26/07/2019>
 
 # import Relevant Librares
 import RPi.GPIO as GPIO
+from time import sleep
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(11, GPIO.OUT)
+GPIO.setup(13, GPIO.OUT)
 
 # Logic that you write
 def main():
-	counter=5			#creates a counter variable
-	while (counter):		#loops 5 times
 		GPIO.output(13,1)		#sets pin 13 to a logic high
-		time.sleep(1)			#introduces a delay
-		GPIO.output(13,0)
-		time.sleep(1)
-		counter=counter-1		#decrements the counter variable
-		print(counter)
+		sleep(1)			#introduces a one second delay
+		GPIO.output(13,0)		#sets pin 13 to a logic low
+		sleep(1)
 # Only run the functions if
 if __name__ == "__main__":
     # Make sure the GPIO is stopped correctly
